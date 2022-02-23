@@ -1,0 +1,17 @@
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.exe
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.deps.json
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.runtimeconfig.json
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.runtimeconfig.dev.json
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.dll
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\bin\Debug\netcoreapp3.1\game.pdb
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.csproj.AssemblyReference.cache
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.Form1.resources
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.csproj.GenerateResource.cache
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.AssemblyInfoInputs.cache
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.AssemblyInfo.cs
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.csproj.CoreCompileInputs.cache
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.dll
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.pdb
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.genruntimeconfig.cache
+C:\Users\Teodora\Desktop\prakse\praksa Vivify\game_CSharp\game\obj\Debug\netcoreapp3.1\game.Properties.Resources.resources
