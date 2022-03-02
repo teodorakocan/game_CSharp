@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Teodora\\Desktop\\prakse\\praksa Vivify\\game_CSharp\\game\\game.csproj",
+      "projectUniqueName": "C:\\Users\\Teodora\\Desktop\\game_CSharp\\game\\game.csproj",
       "projectName": "game",
-      "projectPath": "C:\\Users\\Teodora\\Desktop\\prakse\\praksa Vivify\\game_CSharp\\game\\game.csproj",
+      "projectPath": "C:\\Users\\Teodora\\Desktop\\game_CSharp\\game\\game.csproj",
       "packagesPath": "C:\\Users\\Teodora\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Teodora\\Desktop\\prakse\\praksa Vivify\\game_CSharp\\game\\obj\\",
+      "outputPath": "C:\\Users\\Teodora\\Desktop\\game_CSharp\\game\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

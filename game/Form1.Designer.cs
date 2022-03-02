@@ -46,9 +46,7 @@ namespace game
             this.none = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.wizardBackpack = new System.Windows.Forms.Label();
-            this.wizardScore = new System.Windows.Forms.Label();
             this.swordsmanBackpack = new System.Windows.Forms.Label();
-            this.swordsmanScore = new System.Windows.Forms.Label();
             this.wizardHealth = new System.Windows.Forms.Label();
             this.swordsmanHealth = new System.Windows.Forms.Label();
             this.wizardMessage = new System.Windows.Forms.Label();
@@ -242,15 +240,6 @@ namespace game
             this.wizardBackpack.TabIndex = 14;
             this.wizardBackpack.Text = "Backpack: empty";
             // 
-            // wizardScore
-            // 
-            this.wizardScore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.wizardScore.Location = new System.Drawing.Point(8, 125);
-            this.wizardScore.Name = "wizardScore";
-            this.wizardScore.Size = new System.Drawing.Size(144, 25);
-            this.wizardScore.TabIndex = 15;
-            this.wizardScore.Text = "Score: 0";
-            // 
             // swordsmanBackpack
             // 
             this.swordsmanBackpack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -259,16 +248,6 @@ namespace game
             this.swordsmanBackpack.Size = new System.Drawing.Size(266, 29);
             this.swordsmanBackpack.TabIndex = 16;
             this.swordsmanBackpack.Text = "Backpack: empty";
-            // 
-            // swordsmanScore
-            // 
-            this.swordsmanScore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.swordsmanScore.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.swordsmanScore.Location = new System.Drawing.Point(797, 122);
-            this.swordsmanScore.Name = "swordsmanScore";
-            this.swordsmanScore.Size = new System.Drawing.Size(198, 25);
-            this.swordsmanScore.TabIndex = 17;
-            this.swordsmanScore.Text = "Score: 0";
             // 
             // wizardHealth
             // 
@@ -473,9 +452,7 @@ namespace game
             this.Controls.Add(this.wizardMessage);
             this.Controls.Add(this.swordsmanHealth);
             this.Controls.Add(this.wizardHealth);
-            this.Controls.Add(this.swordsmanScore);
             this.Controls.Add(this.swordsmanBackpack);
-            this.Controls.Add(this.wizardScore);
             this.Controls.Add(this.wizardBackpack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.none);
@@ -534,9 +511,7 @@ namespace game
         private System.Windows.Forms.Label none;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label wizardBackpack;
-        private System.Windows.Forms.Label wizardScore;
         private System.Windows.Forms.Label swordsmanBackpack;
-        private System.Windows.Forms.Label swordsmanScore;
         private System.Windows.Forms.Label wizardHealth;
         private System.Windows.Forms.Label swordsmanHealth;
         private System.Windows.Forms.Label wizardMessage;
