@@ -28,6 +28,16 @@ namespace game
         int horizontalSpeed = 5;
         int verticalSpeed = 3;
 
+        int dragonSpeed = 5;
+        int wizardDragonHealth = 150;
+        int swordsmanDragonHealth = 150;
+        int spiderSpeed = 3;
+        int wizardSpiderHealth = 150;
+        int swordsmanSpiderHealth = 150;
+
+        enum dragonAttacks { strikes, spitsFire };
+        enum spiderAttacks { strikes, bites }
+
         public Form1()
         {
             InitializeComponent();
@@ -41,6 +51,11 @@ namespace game
             wizardHealth.Text = "Helath: " + wizardHero.Health;
             swordsmanHealth.Text = "Health: " + swordsmanHero.Health;
 
+            dragonWizardHealth.Text = "Dragon health: " + wizardDragonHealth;
+            spiderWizardHealth.Text = "Spider health: " + wizardSpiderHealth;
+
+            dragonSwordsmanHealth.Text = "Dragon health: " + swordsmanDragonHealth;
+            spiderSwordsmanHealth.Text = "Spider health: " + swordsmanSpiderHealth;
 
             //wizard
             if (goLeftWizard == true)
@@ -185,6 +200,248 @@ namespace game
                         
                     }
 
+                    if((string)x.Tag == "monsters")
+                    {
+                        if (wizard.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            wizard.BringToFront();
+
+                            //fight between dragon and wizard
+                            if (x.Name == "dragon")
+                            {
+                                if (wizardHero.ActiveWeapon != 0 && dragon.Visible == true)
+                                {
+                                    Random random = new Random();
+                                    int howAttack = random.Next(0, 101); // under 50 heroe attack. under 100 monster attack
+
+                                    if (howAttack <= 50)
+                                    {
+                                        if (wizardActiveWeapon.Text.Contains("magic"))
+                                        {
+                                            wizardDragonHealth -= 20;
+                                            dragonWizardHealth.Text = "Dragon health: " + wizardDragonHealth;
+                                        }
+
+                                        if (wizardDragonHealth < 0)
+                                        {
+                                            wizardMessage.Text = "You killed dragon";
+                                            dragonWizardHealth.Text = "Dragon health: 0";
+                                            dragon.Visible = false;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        Type type = typeof(dragonAttacks);
+
+                                        Array values = type.GetEnumValues();
+
+                                        int index = random.Next(values.Length);
+                                        dragonAttacks value = (dragonAttacks)values.GetValue(index);
+
+                                        if (value.ToString() == "strikes")
+                                        {
+                                            wizardHero.Health -= 5;
+                                            wizardHealth.Text = "Health: " + wizardHero.Health;
+                                        }
+                                        else
+                                        {
+                                            wizardHero.Health -= 20;
+                                            wizardHealth.Text = "Health: " + wizardHero.Health;
+                                        }
+
+                                        if (wizardHero.Health < 0)
+                                        {
+                                            gameTimer.Stop();
+                                            isGameOver = true;
+                                            wizardHealth.Text = "Helth: 0";
+                                            wizardMessage.Text = "You are dead";
+                                            swordsmanMessage.Text = "You won";
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (wizardHero.ActiveWeapon != 0 && spider.Visible == true)
+                                {
+                                    Random random = new Random();
+                                    int howAttack = random.Next(0, 101); // under 50 heroe attack. under 100 monster attack
+
+                                    if (howAttack <= 50)
+                                    {
+                                        if (wizardActiveWeapon.Text.Contains("magic"))
+                                        {
+                                            wizardSpiderHealth -= 20;
+                                            spiderWizardHealth.Text = "Spider health: " + wizardSpiderHealth;
+                                        }
+
+                                        if (wizardSpiderHealth < 0)
+                                        {
+                                            wizardMessage.Text = "You killed spider";
+                                            spiderWizardHealth.Text = "Spider health: 0";
+                                            spider.Visible = false;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        Type type = typeof(spiderAttacks);
+
+                                        Array values = type.GetEnumValues();
+
+                                        int index = random.Next(values.Length);
+                                        spiderAttacks value = (spiderAttacks)values.GetValue(index);
+
+                                        if (value.ToString() == "strikes")
+                                        {
+                                            wizardHero.Health -= 5;
+                                            wizardHealth.Text = "Health: " + wizardHero.Health;
+                                        }
+                                        else
+                                        {
+                                            wizardHero.Health -= 8;
+                                            wizardHealth.Text = "Health: " + wizardHero.Health;
+                                        }
+
+                                        if (wizardHero.Health < 0)
+                                        {
+                                            gameTimer.Stop();
+                                            isGameOver = true;
+                                            wizardHealth.Text = "Helth: 0";
+                                            wizardMessage.Text = "You are dead";
+                                            swordsmanMessage.Text = "You won";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        if (swordsman.Bounds.IntersectsWith(x.Bounds))
+                        {
+                            swordsman.BringToFront();
+
+                            if(x.Name == "dragon")
+                            {
+                                if (swordsmanHero.ActiveWeapon != 0 && dragon.Visible == true)
+                                {
+                                    Random random = new Random();
+                                    int howAttack = random.Next(0, 101); // under 50 heroe attack. under 100 monster attack
+
+                                    if (howAttack <= 50)
+                                    {
+                                        if (swordsmanActiveWeapon.Text.Contains("sword"))
+                                        {
+                                            swordsmanDragonHealth -= 10;
+                                            dragonSwordsmanHealth.Text = "Dragon health: " + swordsmanDragonHealth;
+                                        }
+                                        else
+                                        {
+                                            swordsmanDragonHealth -= 15;
+                                            dragonSwordsmanHealth.Text = "Dragon health: " + swordsmanDragonHealth;
+                                        }
+
+                                        if (swordsmanDragonHealth < 0)
+                                        {
+                                            swordsmanMessage.Text = "You killed dragon";
+                                            dragonSwordsmanHealth.Text = "Dragon health: 0";
+                                            dragon.Visible = false;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        Type type = typeof(dragonAttacks);
+
+                                        Array values = type.GetEnumValues();
+
+                                        int index = random.Next(values.Length);
+                                        dragonAttacks value = (dragonAttacks)values.GetValue(index);
+
+                                        if (value.ToString() == "strikes")
+                                        {
+                                            swordsmanHero.Health -= 5;
+                                            swordsmanHealth.Text = "Health: " + swordsmanHero.Health;
+                                        }
+                                        else
+                                        {
+                                            swordsmanHero.Health -= 20;
+                                            swordsmanHealth.Text = "Health: " + swordsmanHero.Health;
+                                        }
+
+                                        if (swordsmanHero.Health < 0)
+                                        {
+                                            gameTimer.Stop();
+                                            isGameOver = true;
+                                            swordsmanHealth.Text = "Helth: 0";
+                                            swordsmanMessage.Text = "You are dead";
+                                            wizardMessage.Text = "You won";
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                if (swordsmanHero.ActiveWeapon != 0 && spider.Visible == true)
+                                {
+                                    Random random = new Random();
+                                    int howAttack = random.Next(0, 101); // under 50 heroe attack. under 100 monster attack
+
+                                    if (howAttack <= 50)
+                                    {
+                                        if (swordsmanActiveWeapon.Text.Contains("sword"))
+                                        {
+                                            swordsmanSpiderHealth -= 10;
+                                            spiderSwordsmanHealth.Text = "Spider health: " + swordsmanSpiderHealth;
+                                        }
+                                        else
+                                        {
+                                            swordsmanSpiderHealth -= 15;
+                                            spiderSwordsmanHealth.Text = "Spider health: " + swordsmanSpiderHealth;
+                                        }
+
+                                        if (swordsmanSpiderHealth < 0)
+                                        {
+                                            swordsmanMessage.Text = "You killed spider";
+                                            spiderSwordsmanHealth.Text = "Spider health: 0";
+                                            spider.Visible = false;
+                                        }
+
+                                    }
+                                    else
+                                    {
+                                        Type type = typeof(spiderAttacks);
+
+                                        Array values = type.GetEnumValues();
+
+                                        int index = random.Next(values.Length);
+                                        spiderAttacks value = (spiderAttacks)values.GetValue(index);
+
+                                        if (value.ToString() == "strikes")
+                                        {
+                                            swordsmanHero.Health -= 5;
+                                            swordsmanHealth.Text = "Health: " + swordsmanHero.Health;
+                                        }
+                                        else
+                                        {
+                                            swordsmanHero.Health -= 8;
+                                            swordsmanHealth.Text = "Health: " + swordsmanHero.Health;
+                                        }
+
+                                        if (swordsmanHero.Health < 0)
+                                        {
+                                            gameTimer.Stop();
+                                            isGameOver = true;
+                                            swordsmanHealth.Text = "Helth: 0";
+                                            swordsmanMessage.Text = "You are dead";
+                                            wizardMessage.Text = "You won";
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
                 }
             }
 
@@ -308,6 +565,33 @@ namespace game
                 }
                 changeWeaponSwordsman = false;
             }
+
+            dragon.Left -= dragonSpeed;
+
+            if (dragon.Left < pictureBox4.Left || dragon.Left + dragon.Width > pictureBox4.Left + pictureBox4.Width)
+            {
+                dragonSpeed = -dragonSpeed;
+            }
+
+            spider.Left += spiderSpeed;
+
+            if (spider.Left < pictureBox5.Left || spider.Left + spider.Width > pictureBox5.Left + pictureBox5.Width)
+            {
+                spiderSpeed = -spiderSpeed;
+            }
+
+            if (wizard.Top + wizard.Height > this.ClientSize.Height + 50)
+            {
+                wizardHealth.Text = "Helth: 0";
+                wizardMessage.Text = "You fell to your death!";
+            }
+
+            if (swordsman.Top + swordsman.Height > this.ClientSize.Height + 50)
+            {
+                swordsmanHealth.Text = "Helth: 0";
+                swordsmanMessage.Text = "You fell to your death!";
+            }
+
         }
 
         private void KeyIsDown(object sender, KeyEventArgs e)
@@ -449,6 +733,9 @@ namespace game
 
             swordsman.Left = 549;
             swordsman.Top = 655;
+
+            dragon.Left = 313;
+            spider.Left = 729;
 
             gameTimer.Start();
         }

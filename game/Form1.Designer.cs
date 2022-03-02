@@ -61,6 +61,12 @@ namespace game
             this.sword1 = new System.Windows.Forms.PictureBox();
             this.wizardActiveWeapon = new System.Windows.Forms.Label();
             this.swordsmanActiveWeapon = new System.Windows.Forms.Label();
+            this.dragon = new System.Windows.Forms.PictureBox();
+            this.spider = new System.Windows.Forms.PictureBox();
+            this.dragonWizardHealth = new System.Windows.Forms.Label();
+            this.spiderWizardHealth = new System.Windows.Forms.Label();
+            this.dragonSwordsmanHealth = new System.Windows.Forms.Label();
+            this.spiderSwordsmanHealth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.wizard)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.swordsman)).BeginInit();
@@ -78,6 +84,8 @@ namespace game
             ((System.ComponentModel.ISupportInitialize)(this.magic2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spear1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sword1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spider)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -165,7 +173,7 @@ namespace game
             this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.pictureBox6.Location = new System.Drawing.Point(501, 281);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(164, 30);
+            this.pictureBox6.Size = new System.Drawing.Size(131, 30);
             this.pictureBox6.TabIndex = 8;
             this.pictureBox6.TabStop = false;
             this.pictureBox6.Tag = "platform";
@@ -218,7 +226,7 @@ namespace game
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(703, 9);
+            this.label2.Location = new System.Drawing.Point(797, 10);
             this.label2.Name = "label2";
             this.label2.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label2.Size = new System.Drawing.Size(210, 23);
@@ -246,9 +254,9 @@ namespace game
             // swordsmanBackpack
             // 
             this.swordsmanBackpack.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.swordsmanBackpack.Location = new System.Drawing.Point(703, 41);
+            this.swordsmanBackpack.Location = new System.Drawing.Point(797, 41);
             this.swordsmanBackpack.Name = "swordsmanBackpack";
-            this.swordsmanBackpack.Size = new System.Drawing.Size(330, 29);
+            this.swordsmanBackpack.Size = new System.Drawing.Size(266, 29);
             this.swordsmanBackpack.TabIndex = 16;
             this.swordsmanBackpack.Text = "Backpack: empty";
             // 
@@ -256,7 +264,7 @@ namespace game
             // 
             this.swordsmanScore.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.swordsmanScore.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.swordsmanScore.Location = new System.Drawing.Point(703, 125);
+            this.swordsmanScore.Location = new System.Drawing.Point(797, 122);
             this.swordsmanScore.Name = "swordsmanScore";
             this.swordsmanScore.Size = new System.Drawing.Size(198, 25);
             this.swordsmanScore.TabIndex = 17;
@@ -275,7 +283,7 @@ namespace game
             // 
             this.swordsmanHealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.swordsmanHealth.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.swordsmanHealth.Location = new System.Drawing.Point(703, 99);
+            this.swordsmanHealth.Location = new System.Drawing.Point(797, 96);
             this.swordsmanHealth.Name = "swordsmanHealth";
             this.swordsmanHealth.Size = new System.Drawing.Size(172, 26);
             this.swordsmanHealth.TabIndex = 19;
@@ -312,9 +320,9 @@ namespace game
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.pictureBox5.Location = new System.Drawing.Point(739, 330);
+            this.pictureBox5.Location = new System.Drawing.Point(703, 330);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(302, 30);
+            this.pictureBox5.Size = new System.Drawing.Size(338, 30);
             this.pictureBox5.TabIndex = 23;
             this.pictureBox5.TabStop = false;
             this.pictureBox5.Tag = "platform";
@@ -333,7 +341,7 @@ namespace game
             // 
             this.magic2.BackColor = System.Drawing.Color.Transparent;
             this.magic2.Image = ((System.Drawing.Image)(resources.GetObject("magic2.Image")));
-            this.magic2.Location = new System.Drawing.Point(582, 235);
+            this.magic2.Location = new System.Drawing.Point(518, 235);
             this.magic2.Name = "magic2";
             this.magic2.Size = new System.Drawing.Size(53, 40);
             this.magic2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -345,7 +353,7 @@ namespace game
             // 
             this.spear1.BackColor = System.Drawing.Color.Transparent;
             this.spear1.Image = ((System.Drawing.Image)(resources.GetObject("spear1.Image")));
-            this.spear1.Location = new System.Drawing.Point(969, 284);
+            this.spear1.Location = new System.Drawing.Point(954, 284);
             this.spear1.Name = "spear1";
             this.spear1.Size = new System.Drawing.Size(53, 40);
             this.spear1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -357,7 +365,7 @@ namespace game
             // 
             this.sword1.BackColor = System.Drawing.Color.Transparent;
             this.sword1.Image = ((System.Drawing.Image)(resources.GetObject("sword1.Image")));
-            this.sword1.Location = new System.Drawing.Point(669, 492);
+            this.sword1.Location = new System.Drawing.Point(669, 491);
             this.sword1.Name = "sword1";
             this.sword1.Size = new System.Drawing.Size(53, 40);
             this.sword1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -377,11 +385,69 @@ namespace game
             // swordsmanActiveWeapon
             // 
             this.swordsmanActiveWeapon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.swordsmanActiveWeapon.Location = new System.Drawing.Point(703, 70);
+            this.swordsmanActiveWeapon.Location = new System.Drawing.Point(797, 70);
             this.swordsmanActiveWeapon.Name = "swordsmanActiveWeapon";
             this.swordsmanActiveWeapon.Size = new System.Drawing.Size(250, 26);
             this.swordsmanActiveWeapon.TabIndex = 29;
             this.swordsmanActiveWeapon.Text = "Active weapon:";
+            // 
+            // dragon
+            // 
+            this.dragon.Image = ((System.Drawing.Image)(resources.GetObject("dragon.Image")));
+            this.dragon.Location = new System.Drawing.Point(313, 475);
+            this.dragon.Name = "dragon";
+            this.dragon.Size = new System.Drawing.Size(72, 67);
+            this.dragon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.dragon.TabIndex = 30;
+            this.dragon.TabStop = false;
+            this.dragon.Tag = "monsters";
+            // 
+            // spider
+            // 
+            this.spider.Image = ((System.Drawing.Image)(resources.GetObject("spider.Image")));
+            this.spider.Location = new System.Drawing.Point(729, 261);
+            this.spider.Name = "spider";
+            this.spider.Size = new System.Drawing.Size(75, 63);
+            this.spider.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spider.TabIndex = 31;
+            this.spider.TabStop = false;
+            this.spider.Tag = "monsters";
+            // 
+            // dragonWizardHealth
+            // 
+            this.dragonWizardHealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dragonWizardHealth.Location = new System.Drawing.Point(279, 13);
+            this.dragonWizardHealth.Name = "dragonWizardHealth";
+            this.dragonWizardHealth.Size = new System.Drawing.Size(190, 28);
+            this.dragonWizardHealth.TabIndex = 32;
+            this.dragonWizardHealth.Text = "Dragon health:  ";
+            // 
+            // spiderWizardHealth
+            // 
+            this.spiderWizardHealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.spiderWizardHealth.Location = new System.Drawing.Point(279, 76);
+            this.spiderWizardHealth.Name = "spiderWizardHealth";
+            this.spiderWizardHealth.Size = new System.Drawing.Size(174, 25);
+            this.spiderWizardHealth.TabIndex = 33;
+            this.spiderWizardHealth.Text = "Spider helath:";
+            // 
+            // dragonSwordsmanHealth
+            // 
+            this.dragonSwordsmanHealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.dragonSwordsmanHealth.Location = new System.Drawing.Point(587, 13);
+            this.dragonSwordsmanHealth.Name = "dragonSwordsmanHealth";
+            this.dragonSwordsmanHealth.Size = new System.Drawing.Size(189, 28);
+            this.dragonSwordsmanHealth.TabIndex = 36;
+            this.dragonSwordsmanHealth.Text = "Dragon health:";
+            // 
+            // spiderSwordsmanHealth
+            // 
+            this.spiderSwordsmanHealth.Font = new System.Drawing.Font("Arial Rounded MT Bold", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.spiderSwordsmanHealth.Location = new System.Drawing.Point(587, 76);
+            this.spiderSwordsmanHealth.Name = "spiderSwordsmanHealth";
+            this.spiderSwordsmanHealth.Size = new System.Drawing.Size(169, 27);
+            this.spiderSwordsmanHealth.TabIndex = 37;
+            this.spiderSwordsmanHealth.Text = "Spider health:";
             // 
             // Form1
             // 
@@ -389,6 +455,12 @@ namespace game
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1057, 954);
+            this.Controls.Add(this.spiderSwordsmanHealth);
+            this.Controls.Add(this.dragonSwordsmanHealth);
+            this.Controls.Add(this.spiderWizardHealth);
+            this.Controls.Add(this.dragonWizardHealth);
+            this.Controls.Add(this.spider);
+            this.Controls.Add(this.dragon);
             this.Controls.Add(this.swordsmanActiveWeapon);
             this.Controls.Add(this.wizardActiveWeapon);
             this.Controls.Add(this.sword1);
@@ -439,6 +511,8 @@ namespace game
             ((System.ComponentModel.ISupportInitialize)(this.magic2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spear1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sword1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dragon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spider)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -475,6 +549,12 @@ namespace game
         private System.Windows.Forms.PictureBox sword1;
         private System.Windows.Forms.Label wizardActiveWeapon;
         private System.Windows.Forms.Label swordsmanActiveWeapon;
+        private System.Windows.Forms.PictureBox dragon;
+        private System.Windows.Forms.PictureBox spider;
+        private System.Windows.Forms.Label dragonWizardHealth;
+        private System.Windows.Forms.Label spiderWizardHealth;
+        private System.Windows.Forms.Label dragonSwordsmanHealth;
+        private System.Windows.Forms.Label spiderSwordsmanHealth;
     }
 }
 
